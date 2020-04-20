@@ -1,1 +1,1 @@
-curl -s "https://subdomainfinder.c99.nl/scans/$(date +"%Y-%m-%d")/$1" | grep -Po '.*?//\K.*?(?=/)' | grep $1 | awk -F "'" '{print $1}'
+curl -s "https://subdomainfinder.c99.nl/scans/$(date +"%Y-%m-%d")/<domain>" -A "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:59.0)" | grep -Po '.*?//\K.*?(?=/)' | grep <domain> | awk -F "'" '{print $1}'
